@@ -1,0 +1,16 @@
+.git
+.gitignore
+*.md
+.env
+.env.*
+!.env.example
+docker-compose.yml
+docker-compose.yaml
+Dockerfile
+.dockerignore
+kubernetes/
+scripts/
+evidence/
+*.log
+.DS_Store
+mongodb.key

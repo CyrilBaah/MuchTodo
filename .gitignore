@@ -1,0 +1,50 @@
+# Go build and dependency files
+/bin/
+/build/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace file
+*.code-workspace
+
+# Dependency directories
+vendor/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage files
+*.coverprofile
+coverage.out
+
+# Docker
+*.env
+.env.*
+
+# Swagger generated files
+*.swagger.json
+*.swagger.yaml
+
+# Misc
+node_modules/
+
+# Ignore test cache
+*.testcache
