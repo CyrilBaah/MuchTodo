@@ -4,7 +4,7 @@ set -e
 
 echo "Starting MuchTodo application with Docker Compose..."
 
-docker-compose up -d
+docker-compose up -d --remove-orphans
 
 echo "Waiting for services to be healthy..."
 sleep 10

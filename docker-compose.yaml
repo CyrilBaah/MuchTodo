@@ -1,4 +1,24 @@
 services:
+  backend:
+    image: muchtodo-backend:latest
+    container_name: muchtodo-backend
+    restart: unless-stopped
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - MONGO_URI=mongodb://root:example@mongodb:27017/much_todo_db?authSource=admin&replicaSet=rs0&directConnection=true
+      - REDIS_ADDR=redis:6379
+      - JWT_SECRET=your-secret-key-change-in-production
+      - ENV=development
+    networks:
+      - backend
+
   mongodb:
     image: mongo:8.0
     container_name: mongodb
